@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <button type="button" id="login">
+        Connect extension & initialize contracts
+    </button>
+
+    <br/><br/>
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount">
+    <br/><br/>
+    <label for="recipient">Recipient Account:</label>
+    <input type="text" id="recipient" name="recipient" size="80">
+    <br/><br/>
+    <label for="date_of_service">Date of Service (start):</label>
+    <input type="text" id="date_of_service" name="date_of_service" size="80">
+    <br/><br/>
+    <label for="place_of_service">Place of Service:</label>
+    <input type="text" id="place_of_service" name="place_of_service" size="80">
+    <br/><br/>
+    <label for="emergency">Emergency:</label>
+    <input type="text" id="emergency" name="emergency" size="80">
+    <br/><br/>
+    <label for="CPT_code">CPT Code:</label>
+    <input type="text" id="CPT_code" name="CPT_code" size="80">
+    <br/><br/>
+    <label for="diagnosis_pointer">Diagnosis Pointer:</label>
+    <input type="text" id="diagnosis_pointer" name="diagnosis_pointer" size="80">
+    <br/><br/>
+    <label for="epsdt">Early & Periodic Screening, Diagnosis, and Treatment:</label>
+    <input type="text" id="epsdt" name="epsdt" size="80">
+    <br/><br/>
+    <label for="providor_id_NPI">Provider ID (NPI):</label>
+    <input type="text" id="providor_id_NPI" name="providor_id_NPI" size="80">
+    <br/><br/>
+
+    <button type="button" id="approve">
+      Approve cUSD to be spent
+    </button>
+
+    <br/>
+
+    <button type="button" id="send">
+        Send cUSD
+    </button>
+
+    <p>Wait for the "Approve" transaction to confirm before calling "Send."</p>
+    <p>Transaction hash: <a target="_blank" id="txHash"></a></p> 
+    
+    <script src="bundle.js"></script>
+  </body>
+</html>
