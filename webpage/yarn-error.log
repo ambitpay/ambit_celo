@@ -1,30 +1,30 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn
+  /usr/local/bin/node /Users/rhythmbusiness/.yarn/bin/yarn.js
 
 PATH: 
-  /Users/ek/gcp_test/google-cloud-sdk/bin:/Users/ek/opt/anaconda3/bin:/Users/ek/opt/anaconda3/condabin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /Users/rhythmbusiness/.yarn/bin:/Users/rhythmbusiness/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 
 Yarn version: 
-  1.22.17
+  1.22.18
 
 Node version: 
-  16.13.1
+  16.14.0
 
 Platform: 
   darwin x64
 
 Trace: 
   Invariant Violation: Commit hash required
-      at invariant (/usr/local/lib/node_modules/yarn/lib/cli.js:2314:15)
-      at GitFetcher.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:93387:7)
+      at invariant (/Users/rhythmbusiness/.yarn/lib/cli.js:2314:15)
+      at GitFetcher.<anonymous> (/Users/rhythmbusiness/.yarn/lib/cli.js:89309:7)
       at Generator.next (<anonymous>)
-      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:328:14
+      at step (/Users/rhythmbusiness/.yarn/lib/cli.js:310:30)
+      at /Users/rhythmbusiness/.yarn/lib/cli.js:328:14
       at new Promise (<anonymous>)
-      at new F (/usr/local/lib/node_modules/yarn/lib/cli.js:5301:28)
-      at GitFetcher.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:307:12)
-      at GitFetcher.fetchFromExternal (/usr/local/lib/node_modules/yarn/lib/cli.js:93405:20)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:93555:21
+      at new F (/Users/rhythmbusiness/.yarn/lib/cli.js:5301:28)
+      at GitFetcher.<anonymous> (/Users/rhythmbusiness/.yarn/lib/cli.js:307:12)
+      at GitFetcher.fetchFromExternal (/Users/rhythmbusiness/.yarn/lib/cli.js:89327:20)
+      at /Users/rhythmbusiness/.yarn/lib/cli.js:89477:21
 
 npm manifest: 
   {

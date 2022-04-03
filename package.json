@@ -13,5 +13,8 @@
     "@truffle/hdwallet-provider": "^1.5.1",
     "dotenv": "^10.0.0",
     "web3": "^1.6.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
   }
 }
