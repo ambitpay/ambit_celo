@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+  <body class="bg-green-100">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/dist/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
+  <header class="flex flex-row justify-center bg-green-300">
+    <h1>AMBIT</h1>
     <button type="button" id="login">
-        Connect extension & initialize contracts
+      Connect extension & initialize contracts
     </button>
+  </header>
+
+  <main class="container mx-auto justify-center max-w-screen-lg bg-yellow-300">
 
     <h1 class="text-3xl font-bold underline">Test</h1>
 
     <br/><br/>
+    <form>
     <label for="amount">Amount:</label>
-    <input type="text" id="amount" name="amount">
+    <input type="text" id="amount" name="amount" class="shadow appearance-none border border-yellow-300 rounded w-full>
     <br/><br/>
     <label for="recipient">Recipient Account:</label>
     <input type="text" id="recipient" name="recipient" size="80">
@@ -40,6 +46,7 @@
     <label for="providor_id_NPI">Provider ID (NPI):</label>
     <input type="text" id="providor_id_NPI" name="providor_id_NPI" size="80">
     <br/><br/>
+    </form>
 
     <button type="button" id="approve">
       Approve cUSD to be spent
@@ -55,5 +62,6 @@
     <p>Transaction hash: <a target="_blank" id="txHash"></a></p> 
     
     <script src="bundle.js"></script>
+  </main>
   </body>
 </html>

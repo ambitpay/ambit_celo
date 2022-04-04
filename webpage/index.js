@@ -25,6 +25,7 @@ const connectCeloWallet = async function () {
       // Get the users accounts
       const accounts = await kit.web3.eth.getAccounts();
       kit.defaultAccount = accounts[0];
+      console.log ('connected to', kit.defaultAccount);
 
       // Get the network that the user is connected to
       let chainId = await kit.web3.eth.getChainId();
