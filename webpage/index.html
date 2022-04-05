@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body class="bg-green-100">
+  <body class="bg-yellow-200">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <header class="flex flex-row justify-center bg-green-300">
-    <h1>AMBIT</h1>
-    <button type="button" id="login">
-      Connect extension & initialize contracts
-    </button>
+  <header class="flex flex-row justify-between bg-green-300 px-10 py-5">
+    <div>
+      <h1 class="font-bold">AMBIT</h1>
+    </div>
+    <div>
+      <button type="button" id="login" class="border border-black rounded-md px-2">
+        Connect extension & initialize contracts
+      </button>
+    </div>
   </header>
 
-  <main class="container mx-auto justify-center max-w-screen-lg bg-yellow-300">
+  <main class="container mx-auto flex flex-col place-items-center max-w-screen-lg">
 
-    <h1 class="text-3xl font-bold underline">Test</h1>
-
-    <br/><br/>
-    <form>
-    <label for="amount">Amount:</label>
-    <input type="text" id="amount" name="amount" class="shadow appearance-none border border-yellow-300 rounded w-full>
-    <br/><br/>
-    <label for="recipient">Recipient Account:</label>
-    <input type="text" id="recipient" name="recipient" size="80">
-    <br/><br/>
-    <label for="date_of_service">Date of Service (start):</label>
-    <input type="text" id="date_of_service" name="date_of_service" size="80">
-    <br/><br/>
-    <label for="place_of_service">Place of Service:</label>
-    <input type="text" id="place_of_service" name="place_of_service" size="80">
-    <br/><br/>
-    <label for="emergency">Emergency:</label>
-    <input type="text" id="emergency" name="emergency" size="80">
-    <br/><br/>
-    <label for="CPT_code">CPT Code:</label>
-    <input type="text" id="CPT_code" name="CPT_code" size="80">
-    <br/><br/>
-    <label for="diagnosis_pointer">Diagnosis Pointer:</label>
-    <input type="text" id="diagnosis_pointer" name="diagnosis_pointer" size="80">
-    <br/><br/>
-    <label for="epsdt">Early & Periodic Screening, Diagnosis, and Treatment:</label>
-    <input type="text" id="epsdt" name="epsdt" size="80">
-    <br/><br/>
-    <label for="providor_id_NPI">Provider ID (NPI):</label>
-    <input type="text" id="providor_id_NPI" name="providor_id_NPI" size="80">
-    <br/><br/>
+    <form class="container my-20 flex flex-col px-10 border rounded-2xl bg-green-300 py-10 max-w-xl">
+      <label for="amount" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        </span>Amount:<span>
+        <input type="text" id="amount" name="amount" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" />
+      </label>
+      <label for="recipient" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        </span>Recipient Account:<span>
+        <input type="text" id="recipient" name="recipient" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" />
+      </label>
+      <label for="date_of_service" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        <span>Date of Service (start):</span>
+        <input type="text" id="date_of_service" name="date_of_service" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" />
+      </label>
+      
+      <label for="place_of_service" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        <span>Place of Service:</span>
+        <input type="text" id="place_of_service" name="place_of_service" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" />
+      </label>
+      
+      <label for="emergency" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        <span>Emergency:</span>
+        <input type="text" id="emergency" name="emergency" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"/>
+      </label>
+      
+      <label for="CPT_code" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        <span>CPT Code:</span>
+        <input type="text" id="CPT_code" name="CPT_code" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"/>
+      </label>
+      
+      <label for="diagnosis_pointer" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        <span>Diagnosis Pointer:</span>
+        <input type="text" id="diagnosis_pointer" name="diagnosis_pointer" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" />
+      </label>
+      
+      <label for="epsdt" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        <span>Early & Periodic Screening, Diagnosis, and Treatment:</span>
+        <input type="text" id="epsdt" name="epsdt" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" />
+      </label>
+      
+      <label for="providor_id_NPI" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
+        <span>Provider ID (NPI):</span>
+        <input type="text" id="providor_id_NPI" name="providor_id_NPI" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"/>
+      </label>
     </form>
-
-    <button type="button" id="approve">
-      Approve cUSD to be spent
-    </button>
-
-    <br/>
-
-    <button type="button" id="send">
-        Send cUSD
-    </button>
-
-    <p>Wait for the "Approve" transaction to confirm before calling "Send."</p>
-    <p>Transaction hash: <a target="_blank" id="txHash"></a></p> 
+    <div class="container my-5 flex flex-col px-10 border rounded-2xl bg-green-300 py-10 max-w-xl px-20 space-y-5">
+      <button type="button" id="approve" class="border border-black rounded-md px-2 bg-green-200 hover:bg-green-100 py-5">
+        Approve cUSD to be spent
+      </button>
+      <button type="button" id="send" class="border border-black rounded-md px-2 bg-green-200 hover:bg-green-100 py-5">
+          Send cUSD
+      </button>
+      <p class="text-center text-red-400 font-bold italic px-10 text-xl">Wait for the "Approve" transaction to confirm before calling "Send."</p>
+      <p class="text-center px-10 text-lg">Transaction hash: <a target="_blank" id="txHash"></a></p> 
+    </div>
     
     <script src="bundle.js"></script>
   </main>
