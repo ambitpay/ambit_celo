@@ -7,11 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <header class="flex flex-row justify-between bg-green-300 px-10 py-5">
-    <div>
-      <h1 class="font-bold">AMBIT</h1>
+    <div class="flex flex-row justify-between space-x-3">
+      <h1 class="font-bold text-2xl">AMBIT</h1>
+      <a href='/' class="my-1">
+        <span>Pay</span>
+      </a>
+      <a href="/" class="my-1">
+        <span>Docs</span>
+      </a>
     </div>
     <div>
-      <button type="button" id="login" class="border border-black rounded-md px-2">
+      <button type="button" id="login" class="border border-black rounded-md px-2 py-2">
         Connect extension & initialize contracts
       </button>
     </div>
@@ -19,7 +25,7 @@
 
   <main class="container mx-auto flex flex-col place-items-center max-w-screen-lg">
 
-    <form class="container my-20 flex flex-col px-10 border rounded-2xl bg-green-300 py-10 max-w-xl">
+    <form class="container my-20 flex flex-col px-10 border rounded-2xl bg-green-300 py-10 max-w-xl drop-shadow-md">
       <label for="amount" class="uppercase tracking-wide text-black text-xl font-bold mb-2">
         </span>Amount:<span>
         <input type="text" id="amount" name="amount" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" />
@@ -63,18 +69,18 @@
         <input type="text" id="providor_id_NPI" name="providor_id_NPI" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"/>
       </label>
     </form>
-    <div class="container my-5 flex flex-col px-10 border rounded-2xl bg-green-300 py-10 max-w-xl px-20 space-y-5">
-      <button type="button" id="approve" class="border border-black rounded-md px-2 bg-green-200 hover:bg-green-100 py-5">
+
+    <div class="container my-5 flex flex-col px-10 border rounded-2xl bg-green-300 py-10 max-w-xl px-20 space-y-5 drop-shadow-md">
+      <button type="button" id="approve" class="border border-black rounded-md px-2 bg-green-200 hover:bg-green-100 hover:border-yellow-300 py-5">
         Approve cUSD to be spent
       </button>
-      <button type="button" id="send" class="border border-black rounded-md px-2 bg-green-200 hover:bg-green-100 py-5">
+      <button type="button" id="send" class="border border-black rounded-md px-2 bg-green-200 hover:bg-green-100 hover:border-yellow-300 py-5">
           Send cUSD
       </button>
       <p class="text-center text-red-400 font-bold italic px-10 text-xl">Wait for the "Approve" transaction to confirm before calling "Send."</p>
       <p class="text-center px-10 text-lg">Transaction hash: <a target="_blank" id="txHash"></a></p> 
     </div>
-    
-    <script src="bundle.js"></script>
   </main>
+  <script src="bundle.js"></script>
   </body>
 </html>

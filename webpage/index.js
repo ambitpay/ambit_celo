@@ -26,6 +26,7 @@ const connectCeloWallet = async function () {
       const accounts = await kit.web3.eth.getAccounts();
       kit.defaultAccount = accounts[0];
       console.log ('connected to', kit.defaultAccount);
+      walletConnect(kit.defaultAccount);
 
       // Get the network that the user is connected to
       let chainId = await kit.web3.eth.getChainId();
@@ -73,6 +74,14 @@ const showTxHash = async function (transactionHash) {
   let link = `https://alfajores-blockscout.celo-testnet.org/tx/${transactionHash}`;
   document.querySelector("#txHash").textContent = link;
   document.getElementById("txHash").href = link;
+};
+
+const walletConnect = async function (address) {
+  let shortAddress = address.substring(0, 4) + "...." + address.substring(38)
+  let connected = `Wallet Connected: ${shortAddress}`;
+  console.log(connected);
+  document.querySelector("#login").textContent = connected;
+  document.getElementById("#login").innerHTML = connected;
 };
 
 document.querySelector("#login").addEventListener("click", async (e) => {
